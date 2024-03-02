@@ -6,6 +6,7 @@
   --heading-color: #221e1e;
   --font-ubuntu: "Ubuntu", sans-serif;
   --font-comfortaa: "Comfortaa", sans-serif;
+  --primary-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
 }
 
 /* Navbar Start */
@@ -103,6 +104,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   margin: 0 5rem;
   place-items: center;
+  margin-top: 4rem;
 
   & .hero-texts {
     & h1 {
@@ -149,3 +151,186 @@ nav {
 }
 
 /* Hero End */
+
+/* Feature Start */
+
+.feature-sec{
+  margin: 0 5rem;
+  margin-top: 6rem;
+  
+  & p{
+    font-family: var(--font-comfortaa);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  & h1{
+    font-family: var(--font-ubuntu);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  & .features{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+    gap: 2.5rem;
+    margin-top: 3rem;
+
+    & .feature{
+      width: 23rem;
+      height: 18rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      gap: 1rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      transition: box-shadow 200ms ease-in-out;
+
+      & img{
+        width: 6rem;
+        height: 6rem;
+      }
+      
+      & h3{
+        font-family: var(--font-ubuntu);
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--primary-color);
+      }
+
+      & p{
+        font-family: var(--font-comfortaa);
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000000;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+
+      &:hover{
+        box-shadow: var(--primary-shadow);
+      }
+    }
+  }
+}
+
+/* Feature End */
+
+/* Testimonial Start */
+
+.testimonial-sec{
+  margin: 0 5rem;
+  margin-top: 6rem;
+
+  & p{
+    font-family: var(--font-comfortaa);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  & h1{
+    font-family: var(--font-ubuntu);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  & .nx-prev-btns{
+    display: flex;
+    justify-content: space-between;
+    
+    & button{
+      width: 5rem;
+      height: 2.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--primary-color);
+      font-family: var(--font-comfortaa);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 200ms linear;
+      margin-top: 2.5rem;
+
+      &:hover {
+        background-color: #010c28;
+      }
+    }
+  }
+
+  & .testimonials{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    gap: 2.5rem;
+    margin-top: 6rem;
+    
+    & .testimonial{
+      width: 23rem;
+      height: 21rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      gap: 1rem;
+      border-radius: 1rem;
+      padding: 0 1rem;
+      transition: box-shadow 200ms ease-in-out;
+      position: relative;
+      
+      & img{
+        width: 6rem;
+        height: 6rem;
+        position: absolute;
+        top: -18%;
+        border-radius: 50%;
+      }
+
+      & h3{
+        font-family: var(--font-ubuntu);
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: var(--primary-color);
+        margin-top: 2rem;
+      }
+
+      & p:not(:last-child){
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #000000;
+      }
+
+      & p:is(:last-child){
+        font-family: var(--font-comfortaa);
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: #000000;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+
+      &:hover{
+        box-shadow: var(--primary-shadow);
+      }
+    }
+  }
+}
+
+/* Testimonial End */
