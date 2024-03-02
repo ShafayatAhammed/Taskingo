@@ -334,3 +334,105 @@ nav {
 }
 
 /* Testimonial End */
+
+/* Newsletter Start */
+
+.newsletter-sec{
+  margin: 0 5rem;
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-items: center;
+  
+  & .newsletter-icon{
+    width: 17rem;
+    height: 17rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    outline: 0.5rem dashed var(--primary-color);
+    outline-offset: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    & img{
+      width: 13rem;
+      height: 13rem;
+      position: absolute;
+      bottom: 1.5rem;
+    }
+  }
+
+  & .newsletter-form{
+    & h1{
+      font-family: var(--font-ubuntu);
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--heading-color);
+    }
+
+    & p{
+      font-family: var(--font-comfortaa);
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    & .iput{
+      width: 100%;
+      height: 2.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+
+      & i{
+        position: absolute;
+        left: 1rem;
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+
+      & input{
+        width: 100%;
+        height: 100%;
+        padding-left: 4rem;
+        font-family: var(--font-comfortaa);
+        font-size: 1rem;
+        font-weight: bold;
+        color:black;
+        border-radius: 0.5rem;
+        border: 2px solid black;
+        outline: none;
+        transition: border-color 150ms linear;
+
+        &:focus{
+          border-color: var(--primary-color);
+        }
+      }
+    }
+
+    & button{
+      margin-top: 1rem;
+      width: 100%;
+      height: 2.5rem;
+      border: none;
+      border-radius: 8px;
+      background-color: var(--primary-color);
+      font-family: var(--font-comfortaa);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 200ms linear;
+
+      &:hover {
+        background-color: #010c28;
+      }
+    }
+  }
+}
+
+/* Newsletter End */
