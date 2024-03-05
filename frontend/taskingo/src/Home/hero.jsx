@@ -1,8 +1,11 @@
 import React from "react";
 import Multitask from "../image/multitasking.png";
 import "../App.css";
+import {useNavigate} from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <main className="hero">
       <div className="hero-texts">
@@ -14,7 +17,9 @@ const Hero = () => {
           features that you can use if you want. So let's get started by
           clicking the button below.
         </p>
-        <button>Get Started</button>
+        <button onClick={()=>{
+          navigate("/signup")
+        }}>Get Started</button>
       </div>
       <div className="hero-image">
         <img src={Multitask} alt="multitasking" />

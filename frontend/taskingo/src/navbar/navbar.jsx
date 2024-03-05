@@ -1,9 +1,11 @@
 import React from "react";
 import "../App.css";
 import Logo from "../image/logo.png";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <nav>
       <Link to="/" style={{textDecoration:"none"}}>
@@ -36,7 +38,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="cta-btn">
-        <button>Get Started</button>
+        <button onClick={()=>{
+          navigate("/signup")
+        }}>Get Started</button>
       </div>
     </nav>
   );
